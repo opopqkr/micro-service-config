@@ -7,7 +7,7 @@ spring:
 
 token:
   expiration_time: 86400000
-  secret: user_service_token_native_file
+  secret: user_service_token_dev
 
 gateway:
   ip: 192.168.219.102
