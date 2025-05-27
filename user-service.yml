@@ -11,7 +11,9 @@ token:
 
 gateway:
   ip: 192.168.219.102
-
+  
 order-service:
-  url: http://ORDER-SERVICE/%s/orders # @LoadBalanced 어노테이션 사용 시 micro-service 명으로 직접 호출, micro-service -> other-micro-service
-  # url: http://127.0.0.1:8000/order-service/%s/orders # api-gateway 통한 호출, micro-service -> api-gateway -> other-micro-service
+  url: http://ORDER-SERVICE/%s/orders
+  # url: http://127.0.0.1:8000/order-service/%s/orders
+  exception:
+    not-found: An error occurred while retrieving user's order information.
